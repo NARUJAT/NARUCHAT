@@ -36,34 +36,57 @@ async def is_admins(chat_id: int):
     ]
 
 
-EMOJIOS = [  
-      "═══❰𝗛𝗘𝗟𝗟𝗢 𝗝𝗔𝗔𝗡𝗨 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗜𝗖𝗖 𝗖𝗛𝗔𝗧 𝗕𝗢𝗧❱═══",
-]
-      
-START = f"""
-**๏ 𝕙𝕖𝕝𝕝𝕠 𝕛𝕒𝕟𝕦🐒 ๏**
-"""
 
-@bot.on_message(filters.command(["start", "aistart", f"start@{BOT_USERNAME}"]))
-async def restart(client, m: Message):
-    accha = await m.reply_text(
-                text = random.choice(EMOJIOS),
-    )
-    await asyncio.sleep(0.1)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪")
-    await asyncio.sleep(0.1)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║\n║\n║\n║\n║\n║")
-    await asyncio.sleep(0.1)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║\n║\n║\n║\n║\n║\n╚══════ஜ۩۞۩ஜ═════╝")
-    await asyncio.sleep(0.1)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
-    await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣ @GOVIND_OFFICIAL_MP0\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
-    await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣ @GOVIND_OFFICIAL_MP0\n║\n║➣ @GOVIND_USERBOT_UPDATE\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
-    await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣ @GOVIND_OFFICIAL_MP0\n║\n║➣ @sabka_welcome_hai\n║\n║➣ @GOVIND_MP_USERBOT_SPPORT\n║\n╚══════ஜ۩۞۩ஜ═════╝")
-     
+  def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="🦋𝐅𝐄𝐀𝐓𝐔𝐑𝐄🦋",
+                url="https://t.me/Late_Night_Chatters",
+            ),
+            InlineKeyboardButton(
+                text="⚙️𝐒𝐄𝐓𝐓𝐈𝐍𝐆⚙️", url="https://t.me/online_love_fillings"
+            ),
+        ],
+     ]
+    return buttons
+
+#extra shit
+BOT_USERNAME = ("{BOT_USERNAME}")
+
+def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
+    global GROUP_USERNAME
+    global CHANNEL_USERNAME
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+            )
+        
+        ],
+        [
+            InlineKeyboardButton(
+                text="𝐌ᴏʀᴇ🥀", url=f"https://t.me/{CHANNEL_USERNAME}",
+            ),
+        
+            InlineKeyboardButton(
+                text="𝐆𝚁𝙾𝚄𝙿✨", url=f"https://t.me/{GROUP_USERNAME}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="۞ 𝐅𝙴𝙰𝚃𝚄𝚁𝙴𝚂 ۞", callback_data="settings_back_helper"
+            )
+        ],
+     ]
+    return buttons
 
 @bot.on_message(
     filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
