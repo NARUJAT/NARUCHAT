@@ -36,61 +36,25 @@ async def is_admins(chat_id: int):
     ]
 
 
+EMOJIOS = [ 
+      "●─────────────────────",
+]
+      
+START = f"""
+**๏ Hie Baby🐒 ๏**
+"""
 
-  def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="🦋𝐅𝐄𝐀𝐓𝐔𝐑𝐄🦋",
-                url="https://t.me/Late_Night_Chatters",
-            ),
-            InlineKeyboardButton(
-                text="⚙️𝐒𝐄𝐓𝐓𝐈𝐍𝐆⚙️", url="https://t.me/online_love_fillings"
-            ),
-        ],
-     ]
-    return buttons
-
-#extra shit
-BOT_USERNAME = ("{BOT_USERNAME}")
-
-def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
-    global GROUP_USERNAME
-    global CHANNEL_USERNAME
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
-        
-        ],
-        [
-            InlineKeyboardButton(
-                text="𝐌ᴏʀᴇ🥀", url=f"https://t.me/{CHANNEL_USERNAME}",
-            ),
-        
-            InlineKeyboardButton(
-                text="𝐆𝚁𝙾𝚄𝙿✨", url=f"https://t.me/{GROUP_USERNAME}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="۞ 𝐅𝙴𝙰𝚃𝚄𝚁𝙴𝚂 ۞", callback_data="settings_back_helper"
-            )
-        ],
-     ]
-    return buttons
-
-@bot.on_message(
-    filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
-    & ~filters.private)
+@bot.on_message(filters.command(["start", "aistart", f"start@{BOT_USERNAME}"]))
+async def restart(client, m: Message):
+    accha = await m.reply_text(
+                text = random.choice(EMOJIOS),
+    )
+    await asyncio.sleep(0.1)
+    await accha.edit("❍ Hᴇʟʟᴏᥫᩣ/n,Mᴀ'ᴀᴍ/Sɪʀ,I Aᴍ{BOT_USERNAME}/n✨sᴜᴘᴇʀ ғᴀsᴛ ᴄʜᴀᴛʙᴏᴛ ᴡɪᴛʜ ᴀʀᴛɪғɪᴄɪᴀʟ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ ᴀɴᴅ ᴍᴏʀᴇ ɴᴇᴡ ғᴇᴀᴛᴜʀᴇ ɪɴ ᴛʜɪs ʙᴏᴛ/n❤ᴀᴅᴅ ᴍᴇ ɴᴏᴡ ʙᴀʙʏ✨/n[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)/n[❤ᴜᴘᴅᴀᴛes❤](https://t.me/online_love_fillings)") 
+    
+    @bot.on_message(
+        filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
+        & ~filters.private)
 async def chatbotofd(client, message):
     vickdb = MongoClient(MONGO_URL)    
     vick = vickdb["VickDb"]["Vick"]     
