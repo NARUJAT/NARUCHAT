@@ -49,9 +49,21 @@ async def restart(client, m: Message):
     accha = await m.reply_text(
                 text = random.choice(EMOJIOS),
     )
+     await asyncio.sleep(0.1)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪")
     await asyncio.sleep(0.1)
-    await accha.edit("❍ Hᴇʟʟᴏᥫᩣ/n,Mᴀ'ᴀᴍ/Sɪʀ,I Aᴍ{BOT_USERNAME}/n✨sᴜᴘᴇʀ ғᴀsᴛ ᴄʜᴀᴛʙᴏᴛ ᴡɪᴛʜ ᴀʀᴛɪғɪᴄɪᴀʟ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ ᴀɴᴅ ᴍᴏʀᴇ ɴᴇᴡ ғᴇᴀᴛᴜʀᴇ ɪɴ ᴛʜɪs ʙᴏᴛ/n❤ᴀᴅᴅ ᴍᴇ ɴᴏᴡ ʙᴀʙʏ✨/n[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)/n[❤ᴜᴘᴅᴀᴛes❤](https://t.me/online_love_fillings)") 
-    
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║\n║\n║\n║\n║\n║")
+    await asyncio.sleep(0.1)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║\n║\n║\n║\n║\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await asyncio.sleep(0.1)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await asyncio.sleep(0.2)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await asyncio.sleep(0.2)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await asyncio.sleep(0.2)
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)\n║\n║[✨ᴜᴘᴅᴀᴛᴇs✨](https://t.me/online_love_fillings)\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+     
     @bot.on_message(
         filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
         & ~filters.private)
