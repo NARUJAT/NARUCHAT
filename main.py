@@ -14,6 +14,7 @@ API_ID = "14050586"
 API_HASH = "42a60d9c657b106370c79bb0a8ac560c"
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 MONGO_URL = os.environ.get("MONGO_URL", None)
+
 DATABASE_NAME = os.environ.get("DATABASE_NAME") 
 BOT_USERNAME = os.environ.get("BOT_USERNAME")
 BOT_NAME = os.environ.get("BOT_NAME")
@@ -48,7 +49,7 @@ START = f"""
 async def restart(client, m: Message):
     accha = await m.reply_text(
                 text = random.choice(EMOJIOS),
-    )
+    (
     await asyncio.sleep(0.1)
     await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪")
     await asyncio.sleep(0.1)
