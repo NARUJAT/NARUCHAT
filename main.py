@@ -10,8 +10,8 @@ import time
 from datetime import datetime
 #from database.users_chats_db import db
 
-API_ID = "14050586"
-API_HASH = "42a60d9c657b106370c79bb0a8ac560c"
+API_ID = "23386496"
+API_HASH = "7b474ff5cd496bcb9071beaa863273fc"
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 MONGO_URL = os.environ.get("MONGO_URL", None)
 
@@ -59,11 +59,11 @@ async def restart(client, m: Message):
     await asyncio.sleep(0.1)
     await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║➣\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
     await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/mr_naru)\n║\n║➣\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
     await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/mr_naru)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/brokenshayri1)\n║\n║➣\n║\n╚══════ஜ۩۞۩ஜ═════╝")
     await asyncio.sleep(0.2)
-    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/govind_official_mpp)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/Late_Night_Chatters)\n║\n║[✨ᴜᴘᴅᴀᴛᴇs✨](https://t.me/online_love_fillings)\n║\n╚══════ஜ۩۞۩ஜ═════╝")
+    await accha.edit("╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║[✨ᴏᴡɴᴇʀ✨](https://t.me/mr_naru)\n║\n║[✨sᴜᴘᴘᴏʀᴛ✨](https://t.me/brokenshayri1)\n║\n║[✨ᴜᴘᴅᴀᴛᴇs✨](https://t.me/all_about_naru)\n║\n╚══════ஜ۩۞۩ஜ═════╝")
      
     
 @bot.on_message(
@@ -337,5 +337,5 @@ async def vickprivatesticker(client: Client, message: Message):
            if not Yo == "text":
                await message.reply_sticker(f"{hey}")
 
-print(f"🎄𝗩𝗜𝗣 𝗖𝗛𝗔𝗧𝗕𝗢𝗧 𝗜𝗦 𝗦𝗧𝗔𝗥𝗧𝗘𝗗 𝗚𝗢 𝗔𝗡𝗗 𝗘𝗡𝗝𝗢𝗬🎄 ")      
+print(f"🎄𝗡𝗔𝗥𝗨𝗝𝗔𝗔𝗧 𝗖𝗛𝗔𝗧𝗕𝗢𝗧 𝗜𝗦 𝗦𝗧𝗔𝗥𝗧𝗘𝗗 𝗚𝗢 𝗔𝗡𝗗 𝗘𝗡𝗝𝗢𝗬🎄 ")      
 bot.run()
